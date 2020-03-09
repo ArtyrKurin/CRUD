@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies</title>
+</head>
+<body>
+<p>COUNT: {{count}}</p>
+ <form action = '/result' method = "POST">
+         <p>Name <input type = "text" name = "Name" required/></p>
+         <p>email <input type = "text" name = "email" required /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+<hr>
+{% for item in cursor %}
+<table border = 1>
+            <tr>
+               <th> {{ item['name'] }} </th>
+               <td> {{{ item['email'] }} </td>
+                <th><button type="button">Delete</button></th>
+                <th><button type="button">Edit</button></th>
+            </tr>
+      </table>
+{% endfor %}
+</body>
+</html>
