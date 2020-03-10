@@ -1,13 +1,38 @@
-<!doctype html>
 <html>
-   <body>
-      <table border = 1>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </table>
-   </body>
+   <head>
+      <title>Edit</title>
+        </head>
+    <body>
+    {% for upd in update %}
+       <form action="/edit_contact" method="post" name="movie_edit">
+      <div class="field">
+        <label for="name" class="label">Title</label>
+        <div class="control">
+          <input type="text" name="title" class="input" required="required"
+                 value="{{ upd['name'] }}"/>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email" class="label">Year</label>
+        <div class="control">
+          <input type="text" name="year" class="input"
+                 value="{{ upd['email'] }}"/>
+        </div>
+      </div>
+            <div class="field">
+        <label for="position" class="label">Year</label>
+        <div class="control">
+          <input type="text" name="year" class="input"
+                 value="{{ upd['position'] }}"/>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary is-small">Save</button>
+        </div>
+      </div>
+    </form>
+    {% endfor %}
+</body>
 </html>

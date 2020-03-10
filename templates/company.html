@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies</title>
+</head>
+<body>
+<h1>Add new contact</h1>
+<form action="/add_new_company" method="POST" style="display:flex">
+    <p style="margin-right:10%">Name
+      <input style="width:100%" type="text" name="name" size="30" value="{{items.name}}"></p>
+    <p style="margin-right:10%">Email
+      <input style="width:100%" type="text" name="email" size="30" value="{{items.email}}"></p>
+     <input type="submit" value="add" style="width:50px;height: 25px;margin-top:2%"/>
+</form>
+<hr>
+<h2>Table Company</h2>
+<table style="display: flex, border-spacing: 25%">
+  <thead><tr><th>Name</th><th>Email</th><th>Name user</th></tr></thead>
+{% for item in items %}
+<tbody style="border-collapse: separate">
+			<td>{{ item["name"] }}</td>
+			<td>{{ item["email"] }}</td>
+            <td class="func1"><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
+            <td class="func2"><a href="/action3"><button type="submit">Edit</button></a></td>
+</tbody>
+{% endfor %}
+    </table>
+</body>
+</html>
