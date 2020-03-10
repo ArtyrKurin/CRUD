@@ -37,6 +37,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YtYQnrL1zmyOf6zAnKCX7vVGDZ" />
   <component name="ProjectViewState">
@@ -129,10 +130,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="475" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1583764303874" />
-    <state x="680" y="178" key="CommitChangelistDialog2" timestamp="1583775104268">
+    <state x="680" y="178" key="CommitChangelistDialog2" timestamp="1583835708790">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="680" y="178" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1583775104268" />
+    <state x="680" y="178" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1583835708790" />
     <state width="2027" height="245" key="GridCell.Tab.0.bottom" timestamp="1583776635086">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -149,5 +150,13 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2027" height="245" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1583776635086" />
+    <state x="721" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583835644807">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="721" y="380" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1583835644807" />
+    <state x="905" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583835691362">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="905" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1583835691362" />
   </component>
 </project>
