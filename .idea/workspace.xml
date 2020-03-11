@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71f21ac2-bdf9-410d-bdd7-12e103e73a07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/add_to_company.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mongodb.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/mongodb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/company.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
-    </list>
+    <list default="true" id="71f21ac2-bdf9-410d-bdd7-12e103e73a07" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583923800318</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add user to company">
+      <created>1583948067904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583948067904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,7 +179,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="page company and edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="page company and edit" />
+    <MESSAGE value="add user to company" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user to company" />
   </component>
   <component name="WindowStateProjectService">
     <state x="921" y="229" width="814" height="729" key="#Intentions" timestamp="1583765473305">
@@ -191,46 +191,46 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="475" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1583764303874" />
-    <state x="680" y="178" key="CommitChangelistDialog2" timestamp="1583923799855">
+    <state x="680" y="178" key="CommitChangelistDialog2" timestamp="1583948067566">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="680" y="178" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1583923799855" />
+    <state x="680" y="178" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1583948067566" />
     <state x="837" y="335" key="FileChooserDialogImpl" timestamp="1583850815892">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="837" y="335" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1583850815892" />
-    <state width="2027" height="223" key="GridCell.Tab.0.bottom" timestamp="1583947737276">
+    <state width="2027" height="223" key="GridCell.Tab.0.bottom" timestamp="1583948070162">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="223" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1583947737276" />
-    <state width="2027" height="223" key="GridCell.Tab.0.center" timestamp="1583947737276">
+    <state width="2027" height="223" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070162" />
+    <state width="2027" height="223" key="GridCell.Tab.0.center" timestamp="1583948070162">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="223" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1583947737276" />
-    <state width="2027" height="223" key="GridCell.Tab.0.left" timestamp="1583947737276">
+    <state width="2027" height="223" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070162" />
+    <state width="2027" height="223" key="GridCell.Tab.0.left" timestamp="1583948070162">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="223" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1583947737276" />
-    <state width="2027" height="223" key="GridCell.Tab.0.right" timestamp="1583947737276">
+    <state width="2027" height="223" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070162" />
+    <state width="2027" height="223" key="GridCell.Tab.0.right" timestamp="1583948070162">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="223" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1583947737276" />
-    <state width="2027" height="373" key="GridCell.Tab.1.bottom" timestamp="1583947593906">
+    <state width="2027" height="223" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070162" />
+    <state width="2027" height="373" key="GridCell.Tab.1.bottom" timestamp="1583948070160">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="373" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1583947593906" />
-    <state width="2027" height="373" key="GridCell.Tab.1.center" timestamp="1583947593906">
+    <state width="2027" height="373" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070160" />
+    <state width="2027" height="373" key="GridCell.Tab.1.center" timestamp="1583948070160">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="373" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1583947593906" />
-    <state width="2027" height="373" key="GridCell.Tab.1.left" timestamp="1583947593906">
+    <state width="2027" height="373" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070160" />
+    <state width="2027" height="373" key="GridCell.Tab.1.left" timestamp="1583948070160">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="373" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1583947593906" />
-    <state width="2027" height="373" key="GridCell.Tab.1.right" timestamp="1583947593906">
+    <state width="2027" height="373" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070160" />
+    <state width="2027" height="373" key="GridCell.Tab.1.right" timestamp="1583948070160">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="373" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1583947593906" />
+    <state width="2027" height="373" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1583948070160" />
     <state x="725" y="403" key="com.intellij.ide.util.TipDialog" timestamp="1583923501123">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
