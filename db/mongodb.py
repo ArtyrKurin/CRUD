@@ -7,13 +7,6 @@ db = client["CRUD"]
 collection = db["Contacts"]
 collection_companies = db["Companies"]
 
-insertt = {
-    "name": "Mx",
-    "email": "mx.io",
-    "Сотрудники": [
-        {"_id": ObjectId('5e67850b91a15fd6742ebff4')},
-        {"_id": ObjectId('5e67850b91a15fd6742ebff2')}
-    ]
-}
-
-collection_companies.insert(insertt)
+f = collection_companies.find({})
+key = '5e68f22c4696e451f49e8bc0'
+print(collection_companies.find_one({'Сотрудники': {'_id': ObjectId('5e67850b91a15fd6742ebff2')}}))

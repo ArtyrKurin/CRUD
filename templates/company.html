@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Companies</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Jinja!</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://127.0.0.1:5000/company">Company</a></li>
+        <li><a href="http://127.0.0.1:5000/">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </head>
 <body>
 <h1>Add new contact</h1>
@@ -21,8 +43,9 @@
 <tbody style="border-collapse: separate">
 			<td>{{ item["name"] }}</td>
 			<td>{{ item["email"] }}</td>
-            <td class="func1"><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
-            <td class="func2"><a href="/action3"><button type="submit">Edit</button></a></td>
+            <td>{{ item["Сотрудники"] }}</td>
+            <td><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
+            <td><a href="./update?_id={{ item['_id'] }}"><button type="submit">EDIT</button></a></td>
 </tbody>
 {% endfor %}
     </table>

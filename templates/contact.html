@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Jinja!</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://127.0.0.1:5000/company">Company</a></li>
+        <li><a href="http://127.0.0.1:5000/">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </head>
 <body>
 <h1>Add new contact</h1>
 <form action="/add_new_user" method="POST" style="display:flex">
     <p style="margin-right:10%">Name
-      <input style="width:100%" type="text" name="name" size="30" value="{{items.name}}"></p>
+       <input style="width:100%" type="text" name="name_user" size="30" value="{{items.name_user}}"></p>
     <p style="margin-right:10%">Email
       <input style="width:100%" type="text" name="email" size="30" value="{{items.email}}"></p>
     <p style="margin-right:10%">Position
@@ -26,25 +48,15 @@
       </tr>
   </thead>
 {% for item in items %}
-<tbody>
-			<td>{{item["name_user"]}}</td>
-			<td>{{item["email"]}}</td>
-            <td>{{item["position"]}}</td>
-            <td><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
-            <td><a href="/edit?_id={{ item['_id'] }}"><button type="submit">Edit</button></a></td>
-            <td>
-                <select name="my_name">
-                    {% for val in value %}
-                    <option selected="selected">
-                    {{val["name"]}}
-                        {% endfor %}
-                    </option>
-
-                </select>
-            </td>
-
-</tbody>
-{% endfor %}
+        <tbody>
+                <td>{{item["name_user"]}}</td>
+                <td>{{item["email"]}}</td>
+                <td>{{item["position"]}}</td>
+                <td><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
+                <td><a href="./update?_id={{ item['_id'] }}"><button type="submit">EDIT</button></a></td>
+                <td><a href="./add?_id={{ item['_id'] }}"><button type="submit">Add to company</button></a></td>
+        </tbody>
+    {% endfor %}
     </table>
 </body>
 </html>

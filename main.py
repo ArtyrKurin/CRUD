@@ -13,42 +13,32 @@ collection_companies = db["Companies"]
 
 @app.route("/")
 def contact():
-    count = collection_contacts.count()
     items = collection_contacts.find()
-    companies = collection_companies.find()
-    return render_template('contact.html', count=count, items=items, value=companies)
+    companies = collection_companies.find({})
+
+    return render_template('contact.html', items=items, value=companies)
 
 
 @app.route("/company")
 def company():
-    count = collection_companies.count()
     items = collection_companies.find()
     docs = list(items)
     result = []
     for doc in docs:
         item = {'name': doc['name'], 'email': doc['email']}
-        if doc['Сотрудники']:
-            for data in doc['Сотрудники']:
-                emp = collection_contacts.find_one({'_id': data['_id']})
-                if emp:
-                    item['staff'].append({'name_user': emp['name_user']})
+
         result.append(item)
-    return render_template('company.html', count=count, items=result)
+    return render_template('company.html', items=result)
 
 
-@app.route("/remove")
+@app.route("/remove", methods=['GET', 'POST'])
 def remove_id():
     key = request.values.get("_id")
+    cmp = collection_companies.find_one({'_id': key})
+    if cmp:
+        collection_companies.remove({"_id": ObjectId(key)})
+        return redirect("/company")
     collection_contacts.remove({"_id": ObjectId(key)})
-    return redirect("/")
-
-
-@app.route("/add_to_company")
-def add_to_company():
-    # Remove by Id
-    key = request.values.get("_id")
-    find = collection_contacts.find({"_id": ObjectId(key)})
-    collection_companies.insert(find)
     return redirect("/")
 
 
@@ -71,16 +61,29 @@ def add_new_company():
     return redirect('/company')
 
 
-# Finish tomorrow
-@app.route("/edit")
-def edit_contact():
-    name = request.values.get('name')
+@app.route("/add")
+def add_user_to_company():
+    key = request.values.get("_id")
+    print(collection_companies.find_one({'Сотрудники': {'_id': key}}))
+    return redirect('/company')
+
+
+@app.route("/update")
+def update():
+    id = request.values.get("_id")
+    task = collection_contacts.find({"_id": ObjectId(id)})
+    return render_template('result.html', tasks=task)
+
+
+@app.route("/action3", methods=['POST'])
+def update_contact():
+    # Updating a Task with various references
+    id = request.values.get("_id")
+    name = request.values.get('name_user')
     email = request.values.get('email')
     position = request.values.get('position')
-    id = request.values.get("_id")
-    update = collection_contacts.update({"_id": ObjectId(id)},
-                                        {'$set': {"name": name, "email": email, "position": position}})
-    return render_template('result.html', update=update)
+    collection_contacts.update({"_id": ObjectId(id)}, {'$set': {"name_user": name, "email": email, "position": position}})
+    return redirect("/")
 
 
 if __name__ == '__main__':
