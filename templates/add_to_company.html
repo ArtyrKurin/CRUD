@@ -7,12 +7,12 @@
 <body>
 <form action="/add" method="POST">
 	{% for task in tasks %}
-		Unique Object ID : {{ task['_id'] }}<br/>
-	<input type="text" name="_id" value="{{ task['_id'] }}" hidden>
+		Name: {{ task['name'] }}<br/>
+	<input type="text" name="_id" value="{{ task['name'] }}" hidden>
 
 	<table>
 	<tr>
-	<td>Task Name</td><td><input type="text" name="name_user" value="{{ task['name_user'] }}" placeholder="{{ task['name'] }}"></td>
+	<td></td><td><input type="text" name="name_user" value="{{ task['name_user'] }}" placeholder="{{ task['name'] }}"></td>
 	</tr>
 	<tr>
 	<td>Email</td><td><input type="text" name="email" rows=3 cols=30 placeholder="{{ task['email'] }}"> {{ task['desc'] }} </input></td>

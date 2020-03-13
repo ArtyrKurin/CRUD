@@ -27,8 +27,8 @@
 </nav>
 </head>
 <body>
-<h1>Add new contact</h1>
-<form action="/add_new_company" method="POST" style="display:flex">
+<h1>Add new company</h1>
+<form action="/company/add_new_company" method="POST" style="display:flex">
     <p style="margin-right:10%">Name
       <input style="width:100%" type="text" name="name" size="30" value="{{items.name}}"></p>
     <p style="margin-right:10%">Email
@@ -43,9 +43,9 @@
 <tbody style="border-collapse: separate">
 			<td>{{ item["name"] }}</td>
 			<td>{{ item["email"] }}</td>
-            <td>{{ item["Сотрудники"] }}</td>
-            <td><a href="./remove?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
-            <td><a href="./update?_id={{ item['_id'] }}"><button type="submit">EDIT</button></a></td>
+            <td>{{ item["staff"] }}</td>
+            <td><a href="/company/removing/?_id={{ item['_id'] }}"><button type="submit">Delete</button></a></td>
+            <td><a href="/update?_id={{ item['_id'] }}"><button type="submit">EDIT</button></a></td>
 </tbody>
 {% endfor %}
     </table>
